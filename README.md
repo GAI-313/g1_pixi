@@ -32,3 +32,17 @@ macOS で Unitree G1 ロボットを `pixi` 環境で開発するためのワー
     |G1 23DOF|G1 29DOF|
     |:---:|:---:|
     |<img width=100% src="https://i.imgur.com/58cbkZO.gif"/>|<img width=100% src="https://i.imgur.com/PaybUhe.gif"/>|
+
+## Example
+1. **Mujoco を起動する**
+    ```bash
+    pixi run bringup_mujoco
+    ```
+
+1. **別ターミナルでサンプルコードを起動する．引数に渡すネットワークインターフェースに注意．**
+    ```bash
+    pixi run python examples/g1_low_level_example.py en0
+    ```
+    |`examples/g1_low_level_example.py` 実行時の様子|
+    |:---:|
+    |<img src width=100& src="https://i.imgur.com/n1axLv4.gif"/>|
