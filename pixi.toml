@@ -1,0 +1,37 @@
+[workspace]
+authors = ["GAI-313 <nakatogawagai@gmail.com>"]
+channels = ["conda-forge"]
+name = "g1_pixi"
+platforms = ["osx-64"]
+version = "0.1.0"
+
+
+[tasks]
+# setup
+download_unitree_repos = "vcs import . < unitree.repos"
+install_unitree_sdk2_python = {cmd = "pip install -e ./unitree_sdk2_python", depends-on = ["download_unitree_repos"]}
+
+# check
+check_installed_unitree_sdk2_python = "python -c \"from unitree_sdk2py.core.channel import ChannelFactoryInitialize; print('Succcessfly installed unitree_sdk2_python.')\""
+
+[target.osx-64.tasks]
+# setup mujoco
+setup_mujoco = "mv unitree_mujoco/simulate_python/unitree_mujoco.py unitree_mujoco/simulate_python/unitree_mujoco.py.bak && cp unitree_mujoco_osx.py unitree_mujoco/simulate_python/unitree_mujoco.py && cp config.py unitree_mujoco/simulate_python/config.py"
+
+# Bringup
+bringup_mujoco = {cmd = "mjpython unitree_mujoco/simulate_python/unitree_mujoco.py", depends-on = ["setup_mujoco"]}
+
+[dependencies]
+## Python
+python = "3.10.*"
+pip = "*"
+# このバージョンの setuptools をインストールしないと vcstool が動作しない
+setuptools= "65.0.0"
+# simulator
+mujoco = "*"
+pygame = "*"
+numpy = "*"
+pymultinest = "*"
+
+## Downloader
+vcstool = "*"

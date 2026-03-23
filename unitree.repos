@@ -1,0 +1,10 @@
+repositories:
+    unitree_sdk2_python:
+        type: git
+        url: https://github.com/unitreerobotics/unitree_sdk2_python.git
+        version: master
+
+    unitree_mujoco:
+        type: git
+        url: https://github.com/unitreerobotics/unitree_mujoco.git
+        version: main

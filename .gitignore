@@ -1,0 +1,7 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# dependencies
+unitree_sdk2_python/
+unitree_mujoco/
