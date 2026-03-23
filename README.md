@@ -45,4 +45,4 @@ macOS で Unitree G1 ロボットを `pixi` 環境で開発するためのワー
     ```
     |`examples/g1_low_level_example.py` 実行時の様子|
     |:---:|
-    |<img src width=100& src="https://i.imgur.com/n1axLv4.gif"/>|
+    |<img width=100& src="https://i.imgur.com/n1axLv4.gif"/>|
