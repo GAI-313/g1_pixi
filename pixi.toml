@@ -14,7 +14,6 @@ install_unitree_sdk2_python = {cmd = "pip install -e ./unitree_sdk2_python", dep
 # check
 check_installed_unitree_sdk2_python = "python -c \"from unitree_sdk2py.core.channel import ChannelFactoryInitialize; print('Succcessfly installed unitree_sdk2_python.')\""
 
-[target.osx-64.tasks]
 # setup mujoco
 setup_mujoco = "mv unitree_mujoco/simulate_python/unitree_mujoco.py unitree_mujoco/simulate_python/unitree_mujoco.py.bak && cp unitree_mujoco_osx.py unitree_mujoco/simulate_python/unitree_mujoco.py && cp config.py unitree_mujoco/simulate_python/config.py"
 
