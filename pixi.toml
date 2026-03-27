@@ -2,7 +2,7 @@
 authors = ["GAI-313 <nakatogawagai@gmail.com>"]
 channels = ["conda-forge"]
 name = "g1_pixi"
-platforms = ["osx-64"]
+platforms = ["osx-64", "osx-arm64"]
 version = "0.1.0"
 
 
@@ -35,3 +35,10 @@ pymultinest = "*"
 
 ## Downloader
 vcstool = "*"
+
+## GR00T
+#pytorch = "*"
+#onnxruntime = "*"
+#scipy = "*"
+#pyyaml = "*"
+#pynput = "*"
